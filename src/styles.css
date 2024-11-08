@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+/* Puedes agregar estilos globales a este archivo y también importar otros archivos de estilo */
+
+:root {
+    color-scheme: light dark; /* activa el modo nocturno y nos pone en modo oscuro la app */
+}

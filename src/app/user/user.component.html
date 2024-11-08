@@ -1,0 +1,19 @@
+
+<!--aca escribimos el codigo que muestra el componente app-user-->
+<!-- declaramos al dar click en la img se llama al metodo greet, el metodo esta declarado en el componente app-user-->
+<section>
+    @if (isLoggedIn) {
+        <p>Bienvenido {{ userName }}</p>
+        <img 
+        (click)="greet()" 
+        src="https://github.com/midudev.png" alt="photo">
+    } @else {
+        <p>Inicia sesion</p>
+        <button (click)="isLoggedIn = true">Log In</button> <!-- al dar click en el boton se cambia el valor de la variable isLoggedIn -->
+    }
+    <app-games></app-games>
+</section>
+
+<!-- la app parte en false por lo tanto pide inisio de sesion, al dar click en el btn cambia el estado a true por ende se cumple al condicion y muestra el componente app-games /> -->
+
+
