@@ -1,6 +1,33 @@
 <!-- este componente es el principal, todo el html que escribamos aqui se mostrara en el index-->
 <!-- aca se importan los componentes, en este caso estoy llamando al componente app-user(selector es el nombre del componente)-->
-<app-user></app-user>
+<!-- <app-user></app-user> -->
+
+<div>
+    <h1>¿que me parece Angular?</h1>
+    <article>
+        <p>Angular es increible, Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum obcaecati quas consectetur amet deserunt ex tenetur voluptatum. Delectus necessitatibus sequi aliquam tenetur eius ut maiores corporis, nisi excepturi aperiam? Commodi!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod harum nam a maxime autem, ut alias inventore voluptatum corrupti assumenda quibusdam. Architecto quos natus explicabo tempora quo aperiam nisi a.
+        Explicabo deserunt deleniti tempora consequatur blanditiis provident qui vitae neque! Expedita, temporibus nihil nesciunt exercitationem provident veritatis, vel magnam deserunt laudantium culpa porro iure voluptate labore accusamus consequuntur voluptatibus in.
+        Atque odio hic repellendus enim reiciendis perferendis placeat doloremque tenetur cupiditate, similique id optio ipsa eos odit earum blanditiis eveniet. Sint excepturi iure odio aliquam ipsum ducimus eligendi labore quod!
+        Rerum hic officiis minima blanditiis unde quam voluptate pariatur neque esse eum magni a quas sequi asperiores vero quod corporis quo aut, nam quis odio nisi, voluptates rem. Mollitia, nostrum.
+        Iure dignissimos ab nemo explicabo hic. Officiis, perferendis quae nam quo, autem aspernatur aliquid libero molestias commodi sequi eaque laudantium at ratione a doloribus molestiae, praesentium eum facere recusandae! Possimus!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem officiis odit illum eligendi, autem mollitia quasi minima, eaque perferendis omnis dolor voluptates eum explicabo pariatur corrupti, ipsum obcaecati et dicta.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quae suscipit nostrum mollitia sint culpa vero, cumque saepe doloremque possimus ea autem nesciunt a? Adipisci quo quasi exercitationem possimus ratione.
+        Necessitatibus assumenda odit quo eum eligendi. Eum a repellat aliquid ratione at ad voluptatibus fuga, suscipit sapiente quos impedit harum, totam rerum asperiores, quae consequuntur cum commodi assumenda. Laborum, possimus!
+        At quasi tempore ducimus. Architecto, ipsa voluptas! Temporibus corrupti quasi accusantium iusto dolores quaerat! Ab dolorem atque, sint, officia maxime alias, quaerat error nulla similique provident inventore tempora rem possimus.
+        </p>
+    </article>
+
+    <!--defer, difiere la carga en pantalla, lo carga solo al entrar al viewport, placeholder para cuando no esta el componente y se esta cargando, el loading es cuando se esta cargando -->
+    @defer (on viewport) {
+        <app-comments></app-comments>
+    } @placeholder {
+        <p>futuros comentarios</p>
+    } @loading {
+        <p>Cargando comentarios...</p>
+    }
+</div>
 
 
 

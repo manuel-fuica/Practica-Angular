@@ -9,9 +9,17 @@
         src="https://github.com/midudev.png" alt="photo">
     } @else {
         <p>Inicia sesion</p>
-        <button (click)="isLoggedIn = true">Log In</button> <!-- al dar click en el boton se cambia el valor de la variable isLoggedIn -->
+        <!-- al dar click en el boton se cambia el valor de la variable isLoggedIn, y se renderiza el componente, por ende entar al ciclo if -->
+        <button (click)="isLoggedIn = true">Log In</button> 
     }
-    <app-games></app-games>
+    <app-games
+    (addFavoriteEvent)="getFavorite($event)"
+    userName=" {{ userName }}"></app-games>
+
+    <!-- si la variable favGame no es vacia se muestra el parrafo -->
+    @if (favGame !== '') {
+        <p>Tu juego favorito es {{ favGame }}</p>
+    }
 </section>
 
 <!-- la app parte en false por lo tanto pide inisio de sesion, al dar click en el btn cambia el estado a true por ende se cumple al condicion y muestra el componente app-games /> -->
